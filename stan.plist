@@ -37,7 +37,9 @@
 	</array>
 	<key>BBLMKeywordList</key>
 	<array>
- 		<string>for</string>
+		<string>print</string>
+		<string>reject</string>
+		<string>for</string>
 		<string>in</string>
 		<string>while</string>
 		<string>repeat</string>
