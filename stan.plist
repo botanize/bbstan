@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+	stan language module for BBEdit
+	Joey Reid
+	
+	The examples found in this article by Seth Dillingham: 
+	http://www.truerwords.net/articles/bbedit/codeless_language_module.html
+	helped to explain how to add function mapping 
+	(and the related regex-based features)
+	to BBEdit Codeless Language Modules.
+	
+	Stan language definitions: https://github.com/jrnold/stan-language-definitions
+-->
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	<key>BBLMColorsSyntax</key>
+	<true/>
+	<key>BBLMIsCaseSensitive</key>
+	<true/>
+	<key>BBLMLanguageCode</key>
+	<string>Stan</string>
+	<key>BBLMLanguageDisplayName</key>
+	<string>Stan</string>
+	<key>BBLMScansFunctions</key>
+	<true/>
+	<key>BBLMCommentLineDefault</key>
+	<string>//</string>
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			<key>BBLMLanguageSuffix</key>
+			<string>.stan</string>
+		</dict>
+	</array>
+	<key>BBLMKeywordList</key>
+	<array>
+ 		<string>for</string>
+		<string>in</string>
+		<string>while</string>
+		<string>repeat</string>
+		<string>until</string>
+		<string>if</string>
+		<string>then</string>
+		<string>else</string>
+		<string>continue</string>
+		<string>break</string>
+		<string>functions</string>
+		<string>data</string>
+		<string>transformed data</string>
+		<string>parameters</string>
+		<string>transformed parameters</string>
+		<string>model</string>
+		<string>generated quantities</string> 
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+ 		<string>cholesky_factor_corr</string>
+		<string>cholesky_factor_cov</string>
+		<string>corr_matrix</string>
+		<string>cov_matrix</string>
+		<string>int</string>
+		<string>matrix</string>
+		<string>ordered</string>
+		<string>positive_ordered</string>
+		<string>real</string>
+		<string>row_vector</string>
+		<string>simplex</string>
+		<string>unit_vector</string>
+		<string>vector</string>
+		<string>void</string>
+		<string>lp__</string>
+		<string>for</string>
+		<string>in</string>
+		<string>while</string>
+		<string>repeat</string>
+		<string>until</string>
+		<string>if</string>
+		<string>then</string>
+		<string>else</string>
+		<string>true</string>
+		<string>false</string>
+		<string>var</string>
+		<string>fvar</string>
+		<string>STAN_MAJOR</string>
+		<string>STAN_MINOR</string>
+		<string>STAN_PATCH</string>
+		<string>STAN_MATH_MAJOR</string>
+		<string>STAN_MATH_MINOR</string>
+		<string>STAN_MATH_PATCH</string>
+		<string>alignas</string>
+		<string>alignof</string>
+		<string>and</string>
+		<string>and_eq</string>
+		<string>asm</string>
+		<string>auto</string>
+		<string>bitand</string>
+		<string>bitor</string>
+		<string>bool</string>
+		<string>break</string>
+		<string>case</string>
+		<string>catch</string>
+		<string>char</string>
+		<string>char16_t</string>
+		<string>char32_t</string>
+		<string>class</string>
+		<string>compl</string>
+		<string>const</string>
+		<string>constexpr</string>
+		<string>const_cast</string>
+		<string>continue</string>
+		<string>decltype</string>
+		<string>default</string>
+		<string>delete</string>
+		<string>do</string>
+		<string>double</string>
+		<string>dynamic_cast</string>
+		<string>else</string>
+		<string>enum</string>
+		<string>explicit</string>
+		<string>export</string>
+		<string>extern</string>
+		<string>false</string>
+		<string>float</string>
+		<string>for</string>
+		<string>friend</string>
+		<string>goto</string>
+		<string>if</string>
+		<string>inline</string>
+		<string>int</string>
+		<string>long</string>
+		<string>mutable</string>
+		<string>namespace</string>
+		<string>new</string>
+		<string>noexcept</string>
+		<string>not</string>
+		<string>not_eq</string>
+		<string>nullptr</string>
+		<string>operator</string>
+		<string>or</string>
+		<string>or_eq</string>
+		<string>private</string>
+		<string>protected</string>
+		<string>public</string>
+		<string>register</string>
+		<string>reinterpret_cast</string>
+		<string>return</string>
+		<string>short</string>
+		<string>signed</string>
+		<string>sizeof</string>
+		<string>static</string>
+		<string>static_assert</string>
+		<string>static_cast</string>
+		<string>struct</string>
+		<string>switch</string>
+		<string>template</string>
+		<string>this</string>
+		<string>thread_local</string>
+		<string>throw</string>
+		<string>true</string>
+		<string>try</string>
+		<string>typedef</string>
+		<string>typeid</string>
+		<string>typename</string>
+		<string>union</string>
+		<string>unsigned</string>
+		<string>using</string>
+		<string>virtual</string>
+		<string>void</string>
+		<string>volatile</string>
+		<string>wchar_t</string>
+		<string>while</string>
+		<string>xor</string>
+		<string>xor_eq</string>
+		<string>bernoulli_logit_glm_lpmf</string>
+		<string>bernoulli_logit_lpmf</string>
+		<string>bernoulli_lpmf</string>
+		<string>beta_binomial_lpmf</string>
+		<string>beta_lpdf</string>
+		<string>beta_proportion_lpdf</string>
+		<string>binomial_logit_lpmf</string>
+		<string>binomial_lpmf</string>
+		<string>categorical_logit_lpmf</string>
+		<string>categorical_lpmf</string>
+		<string>cauchy_lpdf</string>
+		<string>chi_square_lpdf</string>
+		<string>dirichlet_lpdf</string>
+		<string>double_exponential_lpdf</string>
+		<string>exp_mod_normal_lpdf</string>
+		<string>exponential_lpdf</string>
+		<string>frechet_lpdf</string>
+		<string>gamma_lpdf</string>
+		<string>gaussian_dlm_obs_lpdf</string>
+		<string>gumbel_lpdf</string>
+		<string>hypergeometric_lpmf</string>
+		<string>inv_chi_square_lpdf</string>
+		<string>inv_gamma_lpdf</string>
+		<string>inv_wishart_lpdf</string>
+		<string>lkj_corr_cholesky_lpdf</string>
+		<string>lkj_corr_lpdf</string>
+		<string>logistic_lpdf</string>
+		<string>lognormal_lpdf</string>
+		<string>multi_gp_cholesky_lpdf</string>
+		<string>multi_gp_lpdf</string>
+		<string>multi_normal_cholesky_lpdf</string>
+		<string>multi_normal_lpdf</string>
+		<string>multi_normal_prec_lpdf</string>
+		<string>multi_student_t_lpdf</string>
+		<string>multinomial_lpmf</string>
+		<string>neg_binomial_2_log_glm_lpmf</string>
+		<string>neg_binomial_2_log_lpmf</string>
+		<string>neg_binomial_2_lpmf</string>
+		<string>neg_binomial_lpmf</string>
+		<string>normal_id_glm_lpmf</string>
+		<string>normal_lpdf</string>
+		<string>ordered_logistic_lpmf</string>
+		<string>ordered_probit_lpmf</string>
+		<string>pareto_lpdf</string>
+		<string>pareto_type_2_lpdf</string>
+		<string>poisson_log_glm_lpmf</string>
+		<string>poisson_log_lpmf</string>
+		<string>poisson_lpmf</string>
+		<string>rayleigh_lpdf</string>
+		<string>scaled_inv_chi_square_lpdf</string>
+		<string>skew_normal_lpdf</string>
+		<string>std_normal_lpdf</string>
+		<string>student_t_lpdf</string>
+		<string>uniform_lpdf</string>
+		<string>von_mises_lpdf</string>
+		<string>weibull_lpdf</string>
+		<string>wiener_lpdf</string>
+		<string>wishart_lpdf</string> 
+	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Line Comments</key>
+		<string>#</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.</string>
+		<key>Prefix for Functions</key>
+		<string/>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Prefix for Procedures</key>
+		<string/>
+		<key>Terminator for Prototypes 1</key>
+		<string/>
+		<key>Terminator for Prototypes 2</key>
+		<string/>
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:("(\\"|[^"\r\n]|\\\r)*"))
+		]]></string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x: (?> [\#].*$) | (?>//.*$) | (?>/\*.*?\*/))
+		]]></string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+		(?P>comment) | (?P>string)
+		]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?P<function_name>[a-zA-Z0-9_\.]+)\s*(<-|=)\s*function\s*(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))(?s).+?(?P<function>(?>(?P<braces>{(?>(?>[^{}]+)|(?P>braces))*})))
+		]]></string>
+	</dict>
+</dict>
+</plist>
