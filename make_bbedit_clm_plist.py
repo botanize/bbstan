@@ -75,7 +75,7 @@ template_start = """<?xml version="1.0" encoding="UTF-8"?>
 		<string/>
 		<key>String Pattern</key>
 		<string><![CDATA[
-		(?x:("(\\"|[^"\r\n]|[\n\r])*"))
+		(?x:("(\\"|[^"\\r\\n]|[\\n\\r])*"))
 		]]></string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[
@@ -87,7 +87,7 @@ template_start = """<?xml version="1.0" encoding="UTF-8"?>
 		]]></string>
 		<key>Function Pattern</key>
 		<string><![CDATA[
-		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\n\r]*?(?P<function>(?>(?P<braces>{{(?>(?>[^{{}}]+)|(?P>braces))*}})))
+		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\\n\\r]*?(?P<function>(?>(?P<braces>{{(?>(?>[^{{}}]+)|(?P>braces))*}})))
 		]]></string>
 	</dict>
 	<key>BBLMKeywordList</key>
