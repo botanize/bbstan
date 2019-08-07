@@ -275,7 +275,7 @@
 		]]></string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[
-		(?x: (?> [\#].*$) | (?>//.*$) | (?>/\*.*?\*/))
+		((?>#.*$) | (?>//.*$) | (?>/\*.*?\*/))
 		]]></string>
 		<key>Skip Pattern</key>
 		<string><![CDATA[
@@ -283,7 +283,7 @@
 		]]></string>
 		<key>Function Pattern</key>
 		<string><![CDATA[
-		(?P<function_name>[a-zA-Z0-9_\.]+)\s*(<-|=)\s*function\s*(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))(?s).+?(?P<function>(?>(?P<braces>{(?>(?>[^{}]+)|(?P>braces))*})))
+		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\n\r]*?(?P<function>(?>(?P<braces>{(?>(?>[^{}]+)|(?P>braces))*})))
 		]]></string>
 	</dict>
 </dict>
