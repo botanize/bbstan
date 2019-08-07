@@ -2,14 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <!--
-	stan language module for BBEdit
+	Stan language module for BBEdit (https://mc-stan.org)
 	Joey Reid
-	
-	The examples found in this article by Seth Dillingham: 
-	http://www.truerwords.net/articles/bbedit/codeless_language_module.html
-	helped to explain how to add function mapping 
-	(and the related regex-based features)
-	to BBEdit Codeless Language Modules.
 	
 	Stan language definitions: https://github.com/jrnold/stan-language-definitions
 -->
