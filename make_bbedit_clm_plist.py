@@ -143,8 +143,8 @@ def read_json(filename):
     }
 
 def create_code(data):
-    keywordlist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['keywords'] | data['reserved']])
-    namelist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['distributions'] | data['functions'] | data['types'] | data['blocks']])
+    keywordlist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['keywords'] | data['reserved'] | data['blocks']])
+    namelist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['distributions'] | data['functions'] | data['types']])
     template = '\n'.join([template_start.format(data['version']), keywordlist, template_mid, namelist, template_end])
     
     print(template)
