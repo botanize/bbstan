@@ -29,6 +29,59 @@
 			<string>.stan</string>
 		</dict>
 	</array>
+	<key>Language Features</key>
+	<dict>
+		<key>Open Line Comments</key>
+		<string>//</string>
+		<key>Open Line Comments</key>
+		<string>#</string>
+		<key>Open Block Comments</key>
+		<string>/*</string>
+		<key>Close Block Comments</key>
+		<string>*/</string>
+		<key>Open Strings 1</key>
+		<string>"</string>
+		<key>Close Strings 1</key>
+		<string>"</string>
+		<key>End-of-line Ends Strings 1</key>
+		<false/>
+		<key>Escape Char in Strings 1</key>
+		<string>\</string>
+		<key>Identifier and Keyword Characters</key>
+		<string>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.</string>
+		<key>Prefix for Functions</key>
+		<string/>
+		<key>Open Parameter Lists</key>
+		<string>(</string>
+		<key>Close Parameter Lists</key>
+		<string>)</string>
+		<key>Open Statement Blocks</key>
+		<string>{</string>
+		<key>Close Statement Blocks</key>
+		<string>}</string>
+		<key>Prefix for Procedures</key>
+		<string/>
+		<key>Terminator for Prototypes 1</key>
+		<string/>
+		<key>Terminator for Prototypes 2</key>
+		<string/>
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:("(\\"|[^"\r\n]|[\n\r])*"))
+		]]></string>
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(//.*$)|(#.*$)|(?s:/\*.*?\*/)
+		]]></string>
+		<key>Skip Pattern</key>
+		<string><![CDATA[
+		(?P>comment) | (?P>string)
+		]]></string>
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\n\r]*?(?P<function>(?>(?P<braces>{(?>(?>[^{}]+)|(?P>braces))*})))
+		]]></string>
+	</dict>
 	<key>BBLMKeywordList</key>
 	<array>
 		<string>print</string>
@@ -229,58 +282,5 @@
 		<string>wiener_lpdf</string>
 		<string>wishart_lpdf</string> 
 	</array>
-	<key>Language Features</key>
-	<dict>
-		<key>Open Line Comments</key>
-		<string>//</string>
-		<key>Open Line Comments</key>
-		<string>#</string>
-		<key>Open Block Comments</key>
-		<string>/*</string>
-		<key>Close Block Comments</key>
-		<string>*/</string>
-		<key>Open Strings 1</key>
-		<string>"</string>
-		<key>Close Strings 1</key>
-		<string>"</string>
-		<key>End-of-line Ends Strings 1</key>
-		<false/>
-		<key>Escape Char in Strings 1</key>
-		<string>\</string>
-		<key>Identifier and Keyword Characters</key>
-		<string>1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz.</string>
-		<key>Prefix for Functions</key>
-		<string/>
-		<key>Open Parameter Lists</key>
-		<string>(</string>
-		<key>Close Parameter Lists</key>
-		<string>)</string>
-		<key>Open Statement Blocks</key>
-		<string>{</string>
-		<key>Close Statement Blocks</key>
-		<string>}</string>
-		<key>Prefix for Procedures</key>
-		<string/>
-		<key>Terminator for Prototypes 1</key>
-		<string/>
-		<key>Terminator for Prototypes 2</key>
-		<string/>
-		<key>String Pattern</key>
-		<string><![CDATA[
-		(?x:("(\\"|[^"\r\n]|[\n\r])*"))
-		]]></string>
-		<key>Comment Pattern</key>
-		<string><![CDATA[
-		(//.*$)|(#.*$)|(?s:/\*.*?\*/)
-		]]></string>
-		<key>Skip Pattern</key>
-		<string><![CDATA[
-		(?P>comment) | (?P>string)
-		]]></string>
-		<key>Function Pattern</key>
-		<string><![CDATA[
-		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\n\r]*?(?P<function>(?>(?P<braces>{(?>(?>[^{}]+)|(?P>braces))*})))
-		]]></string>
-	</dict>
 </dict>
 </plist>
