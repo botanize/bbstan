@@ -142,8 +142,6 @@ def read_json(filename):
         'blocks': set(data['blocks']),
     }
 
-data = read_json('stan_lang.json')
-
 def create_code(data):
     keywordlist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['keywords'] | data['reserved']])
     namelist = '\n'.join(['\t\t<string>{!s}</string>'.format(kw) for kw in data['distributions'] | data['functions'] | data['types'] | data['blocks']])
