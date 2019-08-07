@@ -277,7 +277,7 @@
 		]]></string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[
-		((?>#.*$) | (?>//.*$) | (?>/\*.*?\*/))
+		(//.*$)|(#.*$)|(?s:/\*.*?\*/)
 		]]></string>
 		<key>Skip Pattern</key>
 		<string><![CDATA[
