@@ -75,7 +75,7 @@ template_start = """<?xml version="1.0" encoding="UTF-8"?>
 		<string/>
 		<key>String Pattern</key>
 		<string><![CDATA[
-		(?x:("(\\"|[^"\\r\\n]|[\\n\\r])*"))
+		(?x:("(\\\\"|[^"\\r\\n]|[\\n\\r])*"))
 		]]></string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[
