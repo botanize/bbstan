@@ -87,7 +87,7 @@ template_start = """<?xml version="1.0" encoding="UTF-8"?>
 		]]></string>
 		<key>Function Pattern</key>
 		<string><![CDATA[
-		(?:.*?)?(?:\[.*?\])?\s+(?P<function_name>[A-Za-z][A-Za-z0-9_]+)(?P<parens>\((?>(?>[^()]+)|(?P>parens))*\))[\s\\n\\r]*?(?P<function>(?>(?P<braces>{{(?>(?>[^{{}}]+)|(?P>braces))*}})))
+		(?P<function>(?P<function_name>(?:data|parameters|transformed data|transformed parameters|model|functions|generated quantities))\s*?(?>(?P<braces>{{(?>(?>[^{{}}]+)|(?P>braces))*}})))
 		]]></string>
 	</dict>
 	<key>BBLMKeywordList</key>
